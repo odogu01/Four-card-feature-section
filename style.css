@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    /* Primary */
+    --Red: #ea5353;
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: #fcaf4a;
+    --Blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+    --ff: "Poppins", sans-serif;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--Very-Light-Gray);
+    font-family: var(--ff);
+    line-height: 1.5;
+    font-weight: 400;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 8%;
+    margin: 2rem 0;
+}
+.wrapper {
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+}
+h1, .header {
+    color: var(--Very-Dark-Blue);
+}
+.text-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: .3rem;
+    width: 100%;
+    color: var(--Grayish-Blue);
+}
+.text-content-header {
+    font-size: 1.55rem;
+}
+.text-content-header:nth-child(1){
+    font-weight: 300;
+}
+.text-content-header:nth-child(2){
+    margin-bottom: 1rem;
+}
+.card-container{
+    flex-direction: column;
+    gap: 1.3rem;
+}
+.card{
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    width: 100%;
+    box-shadow: 0 10px 20px 0 rgb(69, 211, 211, 0.2);
+}
+.card img{
+    display: block;
+    float: right;
+    width: 50px;
+}
+.card .header{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: left;
+}
+.card .details {
+    font-size: 14px;
+    color: var(--Grayish-Blue);
+}
+.text {
+    margin-bottom: 30px;
+    width: 100%;
+}
+.inner-card {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cyan {
+    border-top: 4px solid var(--Cyan);
+}
+.blue {
+    border-top: 4px solid var(--Blue);
+}
+.red{
+    border-top: 4px solid #ea5353;
+}
+.orange {
+    border-top: 4px solid rgb(252, 175, 74);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* media query */
+@media (min-width: 750px){
+    .inner-card{
+        flex-direction: row;
+        order: -1;
+    }
+}
+@media (min-width: 1000px){
+    .inner-card{
+        flex-direction: column;
+        order: 0;
+    }
+    .card-container{
+        flex-direction: row;
+    }
+    .card {
+        width: 300px;
+        height: auto;
+        margin: .3rem;
+    }
+    .text {
+        display: grid;
+        gap: 1rem;
+    }
+    .content1 {
+        width: 50%;
+    }
+    .text-content p{
+        font-size: 16px;
+    }
+}
